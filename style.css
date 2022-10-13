@@ -29,10 +29,15 @@ header{
     align-items: center;
     text-align: center;
 }
+.header-container.first-level{
+    width: 95%;
+    /* gap: 20px; */
+}
 .header-container.second-level{
     flex-direction: column-reverse;
     width: 95%;
     gap: 20px;
+    justify-content: space-between;
 }
 .header-container.map{
     display: flex;
@@ -195,5 +200,55 @@ hr {
     }
     .contact-paragraph{
         max-width: 420px;
+    }
+
+    .header-container.first-level{
+        width: 95%;
+        max-width: 660px;
+    }
+
+    .header-container.map{
+        flex-direction: row;
+        width: 250px;
+        justify-content: space-between;
+    }
+
+    .header-container.second-level{
+        width: 95%;
+        max-width: 660px;
+        text-align: left;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .header-item.picture{
+        width: 45%;
+        max-width: 500px;
+    }
+    .header-item.about{
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1024px){
+    .header-container.first-level{
+        width: 90%;
+        max-width: 1000px;
+        margin-top: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-container.second-level{
+        width: 90%;
+        max-width: 1000px;
+    }
+    .header-item.picture{
+        max-width: 700px;
+    }
+    .header-item.about{
+        font-size: 20px;
+    }
+    .portfolio.container{
+        grid-template-columns: minmax(150px, 325px) minmax(150px, 325px) minmax(150px, 325px);
     }
 }
